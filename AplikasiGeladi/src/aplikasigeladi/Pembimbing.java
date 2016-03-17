@@ -23,6 +23,6 @@ public class Pembimbing {
     }
     
     public void setNIP(long NIP){
-        return NIP;
+        this.NIP = NIP;
     }
 }
