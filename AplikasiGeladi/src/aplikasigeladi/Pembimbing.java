@@ -7,8 +7,22 @@ package aplikasigeladi;
 
 /**
  *
- * @author Arfiatna
+ * @author Fazrial AN
  */
 public class Pembimbing {
+    private long NIP;
+
+    public pembimbing(String nama, String jenisKelamin, long NIP) {
+        this.nama = nama;
+        this.jenisKelamin = jenisKelamin;
+        this.NIP = NIP;
+    }
     
+    public long getNIP() {
+        return NIP;
+    }
+    
+    public void setNIP(long NIP){
+        return NIP;
+    }
 }
