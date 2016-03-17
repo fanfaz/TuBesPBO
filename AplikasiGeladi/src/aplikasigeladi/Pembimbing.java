@@ -9,7 +9,7 @@ package aplikasigeladi;
  *
  * @author Fazrial AN
  */
-public class Pembimbing {
+public class Pembimbing extends Orang {
     private long NIP;
 
     public pembimbing(String nama, String jenisKelamin, long NIP) {
