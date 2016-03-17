@@ -9,7 +9,7 @@ package aplikasigeladi;
  *
  * @author Fazrial AN
  */
-public class Mahasiswa {
+public class Mahasiswa extends Orang {
     private long NIM;
     private String jurusan;
     
