@@ -7,8 +7,24 @@ package aplikasigeladi;
 
 /**
  *
- * @author Arfiatna
+ * @author Fazrial AN
  */
 public class Mahasiswa {
+    private long NIM;
+    private String jurusan;
     
+    public long getNIM() {
+        return NIM;
+    }
+    
+    public void setNIM() {
+        this.NIM = NIM;
+    }
+    
+    public Mahasiswa(String nama, String jenisKelamin, long NIM, String jurusan) {
+        this.nama = nama;
+        this.jenisKelamin = jenisKelamin;
+        this.NIM = NIM;
+        this.jurusan = jurusan;
+    }
 }
