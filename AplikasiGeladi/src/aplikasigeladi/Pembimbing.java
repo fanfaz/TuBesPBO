@@ -12,12 +12,10 @@ package aplikasigeladi;
 public class Pembimbing extends Orang {
     private long NIP;
 
-    public pembimbing(String nama, String jenisKelamin, long NIP) {
-        this.nama = nama;
-        this.jenisKelamin = jenisKelamin;
-        this.NIP = NIP;
+    public Pembimbing(String nama, String jenisKelamin) {
+        super(nama, jenisKelamin);
     }
-    
+
     public long getNIP() {
         return NIP;
     }

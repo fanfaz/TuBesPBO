@@ -13,6 +13,12 @@ public class Mahasiswa extends Orang {
     private long NIM;
     private String jurusan;
     
+      public Mahasiswa(String nama, String jenisKelamin, long NIM, String jurusan) {
+        super(nama, jenisKelamin);
+        this.NIM = NIM;
+        this.jurusan = jurusan;
+    }
+    
     public long getNIM() {
         return NIM;
     }
@@ -21,10 +27,5 @@ public class Mahasiswa extends Orang {
         this.NIM = NIM;
     }
     
-    public Mahasiswa(String nama, String jenisKelamin, long NIM, String jurusan) {
-        this.nama = nama;
-        this.jenisKelamin = jenisKelamin;
-        this.NIM = NIM;
-        this.jurusan = jurusan;
-    }
+  
 }
