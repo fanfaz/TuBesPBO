@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package aplikasigeladi;
+import java.io.Serializable;
+import java.util.*;
 
 /**
  *
  * @author Arfiatna
  */
-public class Lokasi {
+public class Lokasi implements Serializable {
 	private String daerah;
 	private String namaPerusahaan;
 	private Pembimbing[] pembimbing;

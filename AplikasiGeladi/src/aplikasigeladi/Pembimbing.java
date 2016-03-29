@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package aplikasigeladi;
+import java.io.Serializable;
+import java.util.*;
+
 
 /**
  *
  * @author Fazrial AN
  */
-public class Pembimbing extends Orang {
+public class Pembimbing extends Orang implements Serializable {
     private long NIP;
 
     public Pembimbing(String nama, String jenisKelamin, long NIP) {

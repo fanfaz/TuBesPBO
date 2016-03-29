@@ -4,20 +4,22 @@
  * and open the template in the editor.
  */
 package aplikasigeladi;
+import java.io.Serializable;
+import java.util.*;
 
 /**
  *
  * @author Arfiatna
  */
-public class Kelompok {
+public class Kelompok implements Serializable {
     private int nomor;
 	private Mahasiswa[] anggota;
 	private int nAnggota;
 	
 	
-	public Kelompok(int nomor, int n){
+	public Kelompok(int nomor){
 		this.nomor=nomor;
-		this.anggota=new Mahasiswa[n];
+		this.anggota=new Mahasiswa[nAnggota];
 	}
 	
 	public void addAnggota(Mahasiswa m){
