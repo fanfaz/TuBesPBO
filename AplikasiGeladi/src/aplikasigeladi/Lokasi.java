@@ -19,11 +19,15 @@ public class Lokasi implements Serializable {
 	private Kelompok[] kelompok = new Kelompok[100];
 	private int nKelompok;
 	
-	public Lokasi(String daerah, String namaPerusahaan, int n){
+	public Lokasi(String daerah, String namaPerusahaan){
 		this.daerah=daerah;
 		this.namaPerusahaan=namaPerusahaan;
-		this.pembimbing=new Pembimbing[n];
+		this.pembimbing=new Pembimbing[nPembimbing];
 	}
+
+    Lokasi(String daerah, String namaPerusahaan, int n) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 	public void setDaerah(String daerah){
 		this.daerah = daerah;
@@ -84,6 +88,12 @@ public class Lokasi implements Serializable {
 	public int getNKelompok(){
 		return nKelompok;
 	}
+
+        @Override
+    public String toString(){
+        return "\nDaerah  = " + daerah
+                + "\nNama Perusahaan = " + namaPerusahaan;
+    }   
 	
 	
 }

@@ -12,6 +12,8 @@ package aplikasigeladi;
 public abstract class Orang {
     private String nama;
     private String jenisKelamin;
+    private String username;
+    private String password;
     
     public Orang(String nama, String jenisKelamin) {
         this.nama = nama;
@@ -32,6 +34,22 @@ public abstract class Orang {
     
     public String getJenisKelamin() {
         return jenisKelamin;
+    }
+    
+    public void setUsername() {
+        this.username = username;
+    }
+    
+    public String getUsername() {
+        return username;
+    }
+    
+    public void setPassword(){
+        this.password = password;
+    }
+    
+    public String Password(){
+        return password;
     }
     
     

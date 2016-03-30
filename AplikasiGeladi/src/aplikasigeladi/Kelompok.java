@@ -47,4 +47,9 @@ public class Kelompok implements Serializable {
 		return this.nomor;
 	}
         
+    @Override
+        public String toString(){
+        return "\nNomor Kelompok  = " + nomor;
+    }
+        
 }
