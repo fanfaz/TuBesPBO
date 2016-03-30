@@ -27,4 +27,11 @@ public class Pembimbing extends Orang implements Serializable {
     public void setNIP(long NIP){
         this.NIP = NIP;
     }
+    
+     @Override
+    public String toString(){
+        return "\nNIP Pembimbing  = " + NIP
+                + "\nNama = " + getName()
+                + "\nJenis Kelamin = " + getJenisKelamin();
+    }
 }

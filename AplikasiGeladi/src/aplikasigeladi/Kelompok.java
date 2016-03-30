@@ -42,4 +42,9 @@ public class Kelompok implements Serializable {
 	public int getNAnggota(){
 		return this.nAnggota;
 	}
+        
+        public int getNomor(){
+		return this.nomor;
+	}
+        
 }

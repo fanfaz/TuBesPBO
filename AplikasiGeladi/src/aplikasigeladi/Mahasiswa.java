@@ -29,5 +29,12 @@ public class Mahasiswa extends Orang implements Serializable {
         this.NIM = NIM;
     }
     
-  
+    @Override
+    public String toString(){
+        return "\nNIM Mahasiswa = " + NIM
+                + "\nNama = " + getName()
+                + "\nJenis Kelamin = " + getJenisKelamin()
+                + "\nJurusan = "+ jurusan;
+    } 
+    
 }

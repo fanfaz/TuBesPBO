@@ -64,9 +64,9 @@ public class Lokasi implements Serializable {
 	}
 	
 	
-	public void addKelompok(int nomor, int n){
+	public void addKelompok(int nomor){
 		if (nKelompok<100){
-			kelompok[nKelompok] = new Kelompok(nomor,n);
+			kelompok[nKelompok] = new Kelompok(nomor);
 			nKelompok++;
 		} else {
 			System.out.println("Kuota kelompok sudah penuh");

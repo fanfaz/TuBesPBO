@@ -100,6 +100,43 @@ public class AplikasiKonsol {
         return null;
     }
     
+    public void removeMahasiswa(long NIM){
+        for (int i = 0; i < listMahasiswa.size(); i++){
+            Mahasiswa m = listMahasiswa.get(i);
+            if (m.getNIM()==NIM) {
+                listMahasiswa.remove(i);
+            }
+        }
+    }
+    
+    public void removePembimbing(long NIP){
+        for (int i = 0; i < listPembimbing.size(); i++){
+            Pembimbing p = listPembimbing.get(i);
+            if (p.getNIP()==NIP) {
+                listPembimbing.remove(i);
+            }
+        }
+    }
+    
+    public void removeKelompok(int nomor){
+        for (int i = 0; i < listKelompok.size(); i++){
+           Kelompok k = listKelompok.get(i);
+            if (k.getNomor()==nomor) {
+                listKelompok.remove(i);
+            }
+        }
+    }
+    
+    public void removeLokasi(String daerah, String namaperusahaan){
+        for (int i = 0; i < listLokasi.size(); i++){
+            Lokasi L = listLokasi.get(i);
+            if (L.getDaerah().equals(daerah) && L.getDaerah().equals(namaperusahaan)) {
+                listMahasiswa.remove(i);
+            }
+        }
+    }
+    
+    
     
     
    
