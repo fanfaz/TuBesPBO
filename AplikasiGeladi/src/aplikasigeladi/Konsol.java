@@ -46,8 +46,7 @@ public class Konsol {
                                     String Uname = s2.nextLine();
                                     System.out.println("Password :");
                                     String Pass = s2.nextLine();
-                                    Orang p;
-                                    if (Uname==p.getUsername() && Pass==p.getPassword()){ //login belum
+                                    if (Uname=="admin" && Pass=="admin"){ //login belum
                                         System.out.println("1. Data Pembimbing");
                                         System.out.println("2. Data Kelompok");
                                         System.out.println("3. Data Mahasiswa");
@@ -155,11 +154,11 @@ public class Konsol {
                                         } } while(menuAdmin!=0); return pil;
                                     }
                             case 2: System.out.println("Username :");
-                                    Uname = s2.nextLine();
+                                    long Usname = s2.nextLong();
                                     System.out.println("Password :");
-                                    Pass = s2.nextLine();
+                                    long Passw = s2.nextLong();
                                     Mahasiswa m;
-                                    if (Uname==m.getUsername() && Pass==m.getPassword()){ //login belum
+                                    if ((model.getMahasiswaByNIM(Usname))!=null){ 
                                          System.out.println("1. Pilih Lokasi");
                                          System.out.println("2. Daftar Kelompok");
                                          System.out.println("0. Exit");
@@ -176,17 +175,35 @@ public class Konsol {
                                                         if (model.getLokasiByDaerah(namaDaerah,namaPerusahaan)==null){
                                                         System.out.println("Daerah tidak tersedia");
                                                         }else {Lokasi l = model.getLokasiByDaerah(namaDaerah,namaPerusahaan);
-                                                        if (namaDaerah=="Jawa Barat"){ //belum buat method pengelompokan
-                                                        l.getKelompok(0).addAnggota(m);
+                                                        //if (namaDaerah=="Jawa Barat"){ //belum buat method pengelompokan
+                                                        //l.getKelompok(0).addAnggota(m);
                                                         }}
-                                                    }
+                                                    
                                                      break;
-                                             case 2:break;
-                                         }
-                                    }while(menuMahasiswa!=0); 
+                                             case 2:break;}
+                                         }while(menuMahasiswa!=0);
+                                    } 
            return pil;}
-              
-          }
         }
+    return pil;}
+    
+    public static void main(String[] args) {
+        int pil=-1;
+        model = new AplikasiKonsol();
+        s1 = new Scanner (System.in);
+        s2 = new Scanner (System.in);
+        
+        do {
+            try {
+                pil= MainMenu();
+            } catch (Exception e) {
+                System.out.println("error:"+e.getMessage());
+            }
+        }while (pil!=0);
+        
     }
+    
+    
+}
+          
 

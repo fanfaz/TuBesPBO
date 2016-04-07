@@ -22,7 +22,7 @@ public class Lokasi implements Serializable {
 	public Lokasi(String daerah, String namaPerusahaan){
 		this.daerah=daerah;
 		this.namaPerusahaan=namaPerusahaan;
-		this.pembimbing=new Pembimbing[nPembimbing];
+		this.pembimbing=new Pembimbing[1];
 	}
 
     Lokasi(String daerah, String namaPerusahaan, int n) {

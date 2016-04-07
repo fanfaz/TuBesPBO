@@ -19,7 +19,7 @@ public class Kelompok implements Serializable {
 	
 	public Kelompok(int nomor){
 		this.nomor=nomor;
-		this.anggota=new Mahasiswa[nAnggota];
+                this.anggota = new Mahasiswa[10];
 	}
 	
 	public void addAnggota(Mahasiswa m){
