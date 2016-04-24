@@ -37,7 +37,7 @@ public class ControllerMenuAdminDataPembimbing extends MouseAdapter implements A
             view.setListNim(model.getListNipPembimbing());
             view.setListNim1(model.getListNipPembimbing());
         } catch (SQLException ex) {
-            Logger.getLogger(ControllerMenuAdminDataMahasiswa.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControllerMenuAdminDataPembimbing.class.getName()).log(Level.SEVERE, null, ex);
         }
         
         this.view.getTfNim().addFocusListener(this);

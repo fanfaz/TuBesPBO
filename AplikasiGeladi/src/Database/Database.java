@@ -132,9 +132,66 @@ public class Database {
         return listId.toArray(new String[0]);
     }
      
+     public Integer[] getIdLokasi(String per) throws SQLException{
+        ArrayList<Integer> listId = new ArrayList();
+        String query = "SELECT idLokasi FROM lokasi where nama_perusahaan='"+per+"'";
+        ResultSet rs = statement.executeQuery(query);
+        while (rs.next()){
+            listId.add(rs.getInt(1));
+        }
+        return listId.toArray(new Integer[0]);
+    }
+     
+     public String[] getListDaerah() throws SQLException{
+        ArrayList<String> listId = new ArrayList();
+        String query = "SELECT Daerah FROM lokasi";
+        ResultSet rs = statement.executeQuery(query);
+        while (rs.next()){
+            listId.add(rs.getString(1));
+        }
+        return listId.toArray(new String[0]);
+    }
+     
+     
+     
+     public String[] getListPerusahaan(Lokasi L) throws SQLException{
+        int id = L.getIdLokasi();
+        ArrayList<String> listId = new ArrayList();
+        String query = "SELECT Nama_Perusahaan FROM lokasi where idLokasi="+id;
+        ResultSet rs = statement.executeQuery(query);
+        while (rs.next()){
+            listId.add(rs.getString(1));
+        }
+        return listId.toArray(new String[0]);
+    }
+     
+    
+     
+     
     public Lokasi getLokasi(int idLokasi) throws SQLException{
         Lokasi l = null;
         String query = "SELECT * FROM lokasi WHERE idLokasi="+ idLokasi;
+        ResultSet rs = statement.executeQuery(query);
+        while (rs.next()){
+            l = new Lokasi(rs.getInt(1), rs.getString(2), rs.getString(3));   
+        }
+        return l;
+    }
+    
+    
+    public Lokasi getLokasiByDaerah(String daerah) throws SQLException{
+        Lokasi l = null;
+        String query = "SELECT * FROM lokasi WHERE Daerah='"+ daerah +"'";
+        ResultSet rs = statement.executeQuery(query);
+        while (rs.next()){
+            l = new Lokasi(rs.getInt(1), rs.getString(2), rs.getString(3));   
+        }
+        return l;
+    }   
+    
+    public Lokasi getLokasiByPerusahaan(String per) throws SQLException{
+        Lokasi l = null;
+        String query = "SELECT * FROM lokasi WHERE Nama_Perusahaan='"+ per +"'";
         ResultSet rs = statement.executeQuery(query);
         while (rs.next()){
             l = new Lokasi(rs.getInt(1), rs.getString(2), rs.getString(3));   
@@ -166,6 +223,16 @@ public class Database {
         }
         return p;
     }
+   
+   public String[] getListNamaPem() throws SQLException{
+        ArrayList<String> listId = new ArrayList();
+        String query = "SELECT NAMA_PMB FROM pembimbing";
+        ResultSet rs = statement.executeQuery(query);
+        while (rs.next()){
+            listId.add(rs.getString(1));
+        }
+        return listId.toArray(new String[0]);
+    }
        
     public void updatePembimbing(Pembimbing p) throws SQLException{
         String query= "update pembimbing set nama_pmb= '"+p.getNama()+ "where nim_mhs = "+p.getNIP();
@@ -185,6 +252,7 @@ public class Database {
     
     
     ///KELOMPOK
+    
     
     
      

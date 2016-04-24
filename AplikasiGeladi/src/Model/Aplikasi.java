@@ -70,7 +70,7 @@ public class Aplikasi {
         return l.getIdLokasi();
     }
     
-    public Lokasi getPelanggan(int idLokasi) throws SQLException{
+    public Lokasi getLokasi(int idLokasi) throws SQLException{
         for (Lokasi l : daftarLokasi){
             if (l.getIdLokasi()==idLokasi){
                 return l;
@@ -81,8 +81,42 @@ public class Aplikasi {
         return l;
     }
     
+    public Lokasi getLokasiDaerah(String Daerah) throws SQLException{
+        for (Lokasi l : daftarLokasi){
+            if (l.getDaerah()==Daerah){
+                return l;
+            }
+        }
+        Lokasi l = connection.getLokasiByDaerah(Daerah);
+        daftarLokasi.add(l);
+        return l;
+    }
+    
+    public Lokasi getLokasiPerusahaan(String per) throws SQLException{
+        for (Lokasi l : daftarLokasi){
+            if (l.getNamaPerusahaan()==per){
+                return l;
+            }
+        }
+        Lokasi l = connection.getLokasiByPerusahaan(per);
+        daftarLokasi.add(l);
+        return l;
+    }
+    
     public String[] getListIdLokasi() throws SQLException{
         return connection.getListIdLokasi();
+    }
+    
+    public String[] getListDaerah() throws SQLException{
+        return connection.getListDaerah();
+    }
+    
+    public Integer[] getIdLokasi(String per) throws SQLException{
+        return connection.getIdLokasi(per);
+    }
+    
+    public String[] getListPerusahaan(Lokasi L) throws SQLException{
+        return connection.getListPerusahaan(L);
     }
     
     public void updateLokasi(Lokasi l) throws SQLException{
@@ -118,6 +152,14 @@ public class Aplikasi {
    public void updatePembimbing(Pembimbing p) throws SQLException{
         connection.updatePembimbing(p);
     }
+   
+   public String[] getListListPembimbing() throws SQLException{
+        return connection.getListNamaPem();
+    }
+   
+   ///KELOMPOK
+   
+   
    
    
 }

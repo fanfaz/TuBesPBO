@@ -82,7 +82,7 @@ public class ControllerLogin implements ActionListener, FocusListener {
                 
                 if (m != null) {
                     if (password.equals(m.getNIM())){
-                        //new ControllerMenuMahasiswaDaftar(model);
+                        new ControllerMenuMahasiswaDaftar(model,m);
                         view.dispose();
                     
                     }else{
