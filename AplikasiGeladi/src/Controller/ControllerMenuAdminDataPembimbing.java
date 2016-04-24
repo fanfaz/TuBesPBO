@@ -6,7 +6,7 @@
 package Controller;
 import Model.Aplikasi;
 import Model.Pembimbing;
-import View.MenuAdminDatamahasiswa;
+import View.MenuAdminDataPembimbing;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
@@ -23,12 +23,12 @@ import java.util.logging.Logger;
 public class ControllerMenuAdminDataPembimbing extends MouseAdapter implements ActionListener,FocusListener {
      
     Aplikasi model;
-    MenuAdminDatamahasiswa view;
+    MenuAdminDataPembimbing view;
     Pembimbing p;
     
     public ControllerMenuAdminDataPembimbing(Aplikasi model) {
         this.model = model;
-        view = new MenuAdminDatamahasiswa();
+        view = new MenuAdminDataPembimbing();
         view.setVisible(true);
         view.addAdapter(this);
         view.addListener(this);
