@@ -58,21 +58,13 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
         return tfJK1.getText();
     }
     
-    public void setJurusan1(String s) {
-        tfJurusan1.setText(s);
-    }
     
-    public String getJurusan1() {
-        return tfJurusan1.getText();
-    }
 
     public void setTfJK1(JTextField tfJK) {
         this.tfJK1 = tfJK;
     }
 
-    public void setTfJurusan1(JTextField tfJurusan) {
-        this.tfJurusan1 = tfJurusan;
-    }
+    
 
     public void setTfNama1(JTextField tfNama) {
         this.tfNama1 = tfNama;
@@ -86,9 +78,7 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
         return tfJK1;
     }
 
-    public JTextField getTfJurusan1() {
-        return tfJurusan1;
-    }
+    
 
     public JTextField getTfNama1() {
         return tfNama1;
@@ -128,21 +118,13 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
         return tfJK.getText();
     }
     
-    public void setJurusan(String s) {
-        tfJurusan.setText(s);
-    }
     
-    public String getJurusan() {
-        return tfJurusan.getText();
-    }
 
     public void setTfJK(JTextField tfJK) {
         this.tfJK = tfJK;
     }
 
-    public void setTfJurusan(JTextField tfJurusan) {
-        this.tfJurusan = tfJurusan;
-    }
+    
 
     public void setTfNama(JTextField tfNama) {
         this.tfNama = tfNama;
@@ -156,10 +138,7 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
         return tfJK;
     }
 
-    public JTextField getTfJurusan() {
-        return tfJurusan;
-    }
-
+    
     public JTextField getTfNama() {
         return tfNama;
     }
@@ -272,11 +251,9 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         tfNama = new javax.swing.JTextField();
         tfJK = new javax.swing.JTextField();
         tfNim = new javax.swing.JTextField();
-        tfJurusan = new javax.swing.JTextField();
         BtnAddPembimbing = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -287,8 +264,6 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
         tfJK1 = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         tfNim1 = new javax.swing.JTextField();
-        jLabel10 = new javax.swing.JLabel();
-        tfJurusan1 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         btnEdit = new javax.swing.JButton();
         BtnExit = new javax.swing.JButton();
@@ -355,8 +330,6 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
 
         jLabel5.setText("NIM");
 
-        jLabel6.setText("Jurusan");
-
         BtnAddPembimbing.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gambar/add pembimbing.png"))); // NOI18N
         BtnAddPembimbing.setText("jButton1");
 
@@ -372,12 +345,10 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
-                            .addComponent(jLabel6)
                             .addComponent(jLabel3))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
-                            .addComponent(tfNim)
+                            .addComponent(tfNim, javax.swing.GroupLayout.DEFAULT_SIZE, 333, Short.MAX_VALUE)
                             .addComponent(tfJK)
                             .addComponent(tfNama))))
                 .addContainerGap(33, Short.MAX_VALUE))
@@ -397,13 +368,9 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(tfNim, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(tfJurusan, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(43, 43, 43)
                 .addComponent(BtnAddPembimbing)
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Add Pembimbing", jPanel2);
@@ -420,8 +387,6 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
         jLabel8.setText("Jenis Kelamin");
 
         jLabel9.setText("NIM");
-
-        jLabel10.setText("Jurusan");
 
         jLabel11.setText("NIM Yang Akan Diedit");
 
@@ -446,11 +411,9 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel8)
                             .addComponent(jLabel9)
-                            .addComponent(jLabel10)
                             .addComponent(jLabel7))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tfJurusan1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(tfNim1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(tfJK1, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(tfNama1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 333, javax.swing.GroupLayout.PREFERRED_SIZE))))
@@ -475,13 +438,9 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
                     .addComponent(tfNim1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel10)
-                    .addComponent(tfJurusan1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(43, 43, 43)
                 .addComponent(btnEdit)
-                .addContainerGap(61, Short.MAX_VALUE))
+                .addContainerGap(67, Short.MAX_VALUE))
         );
 
         jTabbedPane2.addTab("Edit Pembimbing", jPanel3);
@@ -537,13 +496,11 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
     private javax.swing.JButton btnEdit;
     private javax.swing.JTextArea detilMahasiswa;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
@@ -558,8 +515,6 @@ public class MenuAdminDataPembimbing extends javax.swing.JFrame {
     private javax.swing.JList<String> listNim1;
     private javax.swing.JTextField tfJK;
     private javax.swing.JTextField tfJK1;
-    private javax.swing.JTextField tfJurusan;
-    private javax.swing.JTextField tfJurusan1;
     private javax.swing.JTextField tfNama;
     private javax.swing.JTextField tfNama1;
     private javax.swing.JTextField tfNim;

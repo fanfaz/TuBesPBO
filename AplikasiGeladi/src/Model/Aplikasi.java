@@ -92,7 +92,7 @@ public class Aplikasi {
     
     /////LOKASI
     
-    public long createPembimbing(String nama, String jenisKelamin, long NIP) throws SQLException{
+    public String createPembimbing(String nama, String jenisKelamin, String NIP) throws SQLException{
         Pembimbing p = new Pembimbing(nama,jenisKelamin,NIP);
         daftarPembimbing.add(p);
         connection.savePembimbing(p);
@@ -100,7 +100,7 @@ public class Aplikasi {
     }
     
     
-    public Pembimbing getPembimbing(long nip) throws SQLException{
+    public Pembimbing getPembimbing(String nip) throws SQLException{
         for (Pembimbing p : daftarPembimbing){
             if (p.getNIP()==nip){
                 return p;
@@ -111,7 +111,7 @@ public class Aplikasi {
         return p;
     }
     
-    public Long[] getListNipPembimbing() throws SQLException{
+    public String[] getListNipPembimbing() throws SQLException{
         return connection.getListNipPembimbing();
     }
     

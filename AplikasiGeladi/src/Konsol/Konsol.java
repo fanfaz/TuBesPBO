@@ -68,19 +68,19 @@ public class Konsol {
                                                         case 1 :System.out.println("1. Nama Pembimbing :");
                                                                 String namaPembimbing = s2.nextLine();
                                                                 System.out.println("2. NIP Pembimbing :");
-                                                                Long nipPembimbing = s2.nextLong();
+                                                                String nipPembimbing = s2.nextLine();
                                                                 System.out.println("3. Jenis Kelamin :");
                                                                 String jKelaminPembimbing = s2.nextLine();
                                                                 model.insertPembimbing(namaPembimbing,jKelaminPembimbing,nipPembimbing); //penggunaan method belum mengerti
                                                                 break;
                                                         case 2 :System.out.println("Masukkan NIP Pembimbing :");
-                                                                nipPembimbing = s2.nextLong();
+                                                                nipPembimbing = s2.nextLine();
                                                                 if (model.getPembimbingByNIP(nipPembimbing)==null){
                                                                     System.out.println("Data tidak ada");
                                                                 } else {model.removePembimbing(nipPembimbing);}
                                                                 break;
                                                         case 3 :System.out.println("Masukkan NIP Pembimbing :");
-                                                                nipPembimbing = s2.nextLong();
+                                                                nipPembimbing = s2.nextLine();
                                                                 model.viewPembimbing(nipPembimbing);
                                                                 break;}
                                                      break;

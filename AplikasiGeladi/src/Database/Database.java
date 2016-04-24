@@ -157,12 +157,12 @@ public class Database {
     }
    
    
-   public Pembimbing getPembimbing(long nip) throws SQLException{
+   public Pembimbing getPembimbing(String nip) throws SQLException{
         Pembimbing p = null;
         String query = "SELECT * FROM pembimbing WHERE NIP_PMB="+ nip;
         ResultSet rs = statement.executeQuery(query);
         while (rs.next()){
-            p = new Pembimbing(rs.getString(2), rs.getString(3), rs.getLong(1));   
+            p = new Pembimbing(rs.getString(2), rs.getString(3), rs.getString(1));   
         }
         return p;
     }
@@ -172,15 +172,17 @@ public class Database {
         statement.executeUpdate(query);
     }
     
-    public Long[] getListNipPembimbing() throws SQLException{
-        ArrayList<Long> listId = new ArrayList();
+    public String[] getListNipPembimbing() throws SQLException{
+        ArrayList<String> listId = new ArrayList();
         String query = "SELECT NIP_PMB FROM pembimbing";
         ResultSet rs = statement.executeQuery(query);
         while (rs.next()){
-            listId.add(rs.getLong(1));
+            listId.add(rs.getString(1));
         }
-        return listId.toArray(new Long[0]);
+        return listId.toArray(new String[0]);
     }
+    
+    
     
     ///KELOMPOK
     

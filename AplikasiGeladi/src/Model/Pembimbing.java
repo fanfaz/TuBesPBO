@@ -12,18 +12,18 @@ import java.util.*;
  * @author USER
  */
 public class Pembimbing extends Orang implements Serializable{
-    private long NIP;
+    private String NIP;
     
-    public Pembimbing(String nama, String jenisKelamin, long NIP){
+    public Pembimbing(String nama, String jenisKelamin, String NIP){
         super(nama, jenisKelamin);
         this.NIP = NIP;
     }
 
-    public long getNIP() {
+    public String getNIP() {
         return NIP;
     }
 
-    public void setNIP(long NIP) {
+    public void setNIP(String NIP) {
         this.NIP = NIP;
     }
     

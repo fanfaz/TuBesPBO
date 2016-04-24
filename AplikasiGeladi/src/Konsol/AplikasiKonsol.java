@@ -64,7 +64,7 @@ public class AplikasiKonsol {
         listMahasiswa.add(new Mahasiswa(nama,jenisKelamin,NIM,jurusan));
     }
     
-    public void insertPembimbing(String nama, String jenisKelamin, long NIP){
+    public void insertPembimbing(String nama, String jenisKelamin, String NIP){
         listPembimbing.add(new Pembimbing(nama,jenisKelamin,NIP));
     }
     
@@ -101,7 +101,7 @@ public class AplikasiKonsol {
         return null;
     }
     
-    public Pembimbing getPembimbingByNIP(long NIP) {
+    public Pembimbing getPembimbingByNIP(String NIP) {
         for(Pembimbing P : listPembimbing)
         {
             if(P.getNIP()==NIP)
@@ -119,7 +119,7 @@ public class AplikasiKonsol {
         }
     }
     
-    public void removePembimbing(long NIP){
+    public void removePembimbing(String NIP){
         for (int i = 0; i < listPembimbing.size(); i++){
             Pembimbing p = listPembimbing.get(i);
             if (p.getNIP()==NIP) {
@@ -146,7 +146,7 @@ public class AplikasiKonsol {
         }
     }
     
-    public void viewPembimbing(long NIP){
+    public void viewPembimbing(String NIP){
         for (Pembimbing p : listPembimbing){
             if ( p.getNIP()==NIP){
             System.out.println("-----");

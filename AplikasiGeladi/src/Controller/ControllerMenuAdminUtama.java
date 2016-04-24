@@ -40,7 +40,7 @@ public class ControllerMenuAdminUtama implements ActionListener{
             new Controller.ControllerMenuAdminDataMahasiswa(model);
             view.dispose();
         }else if (source.equals(view.getBtnDataPem())){
-            new Controller.ControllerMenuAdminDataPembimbing();
+            new Controller.ControllerMenuAdminDataPembimbing(model);
             view.dispose();
         }else if (source.equals(view.getBtnLogout())){
             new Controller.ControllerLogin(model);
