@@ -3,35 +3,34 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aplikasigeladi;
+package Model;
+
 import java.io.Serializable;
 import java.util.*;
-
-
 /**
  *
- * @author Fazrial AN
+ * @author USER
  */
-public class Pembimbing extends Orang implements Serializable {
+public class Pembimbing extends Orang implements Serializable{
     private long NIP;
-
-    public Pembimbing(String nama, String jenisKelamin, long NIP) {
+    
+    public Pembimbing(String nama, String jenisKelamin, long NIP){
         super(nama, jenisKelamin);
-        this.NIP = NIP ;
+        this.NIP = NIP;
     }
 
     public long getNIP() {
         return NIP;
     }
-    
-    public void setNIP(long NIP){
+
+    public void setNIP(long NIP) {
         this.NIP = NIP;
     }
     
      @Override
     public String toString(){
         return "\nNIP Pembimbing  = " + NIP
-                + "\nNama = " + getName()
+                + "\nNama = " + getNama()
                 + "\nJenis Kelamin = " + getJenisKelamin();
     }
 }

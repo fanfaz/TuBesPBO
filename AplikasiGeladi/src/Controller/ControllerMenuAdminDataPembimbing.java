@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package aplikasigeladi;
+package Controller;
 
 /**
  *
- * @author Arfia
+ * @author ARFIATNA
  */
-public class Driver {
-   
-   
-    
+public class ControllerMenuAdminDataPembimbing {
     
 }
