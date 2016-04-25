@@ -36,11 +36,11 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
     }
 
     public void setBtnKel2(JToggleButton btnKel2) {
-        this.btnKel2 = btnKel2;
+        this.btnKel3 = btnKel2;
     }
 
     public void setBtnKel3(JToggleButton btnKel3) {
-        this.btnKel3 = btnKel3;
+        this.btnKel2 = btnKel3;
     }
     
     public boolean but1(){
@@ -48,11 +48,11 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
     }
     
     public boolean but2(){
-        return this.btnKel2.isSelected();
+        return this.btnKel3.isSelected();
     }
     
     public boolean but3(){
-        return this.btnKel3.isSelected();
+        return this.btnKel2.isSelected();
     }
     
     
@@ -61,11 +61,11 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
     }
 
     public JToggleButton getBtnKel2() {
-        return btnKel2;
+        return btnKel3;
     }
 
     public JToggleButton getBtnKel3() {
-        return btnKel3;
+        return btnKel2;
     }
 
     
@@ -139,8 +139,8 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
          BtnOk.addActionListener(e);  
          BtnExit.addActionListener(e); 
          btnKel1.addActionListener(e);
-         btnKel2.addActionListener(e);
          btnKel3.addActionListener(e);
+         btnKel2.addActionListener(e);
          
     }
      
@@ -200,8 +200,8 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
         listLokasi = new javax.swing.JList<>();
         jLabel6 = new javax.swing.JLabel();
         btnKel1 = new javax.swing.JToggleButton();
-        btnKel2 = new javax.swing.JToggleButton();
         btnKel3 = new javax.swing.JToggleButton();
+        btnKel2 = new javax.swing.JToggleButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
@@ -256,9 +256,14 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
 
         btnKel1.setText("Kelompok 1");
 
-        btnKel2.setText("Kelompok 3");
+        btnKel3.setText("Kelompok 3");
 
-        btnKel3.setText("Kelompok 2");
+        btnKel2.setText("Kelompok 2");
+        btnKel2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnKel2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -280,9 +285,9 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnKel1)
                         .addGap(18, 18, 18)
-                        .addComponent(btnKel3)
+                        .addComponent(btnKel2)
                         .addGap(18, 18, 18)
-                        .addComponent(btnKel2)))
+                        .addComponent(btnKel3)))
                 .addContainerGap(216, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -300,8 +305,8 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnKel1)
-                    .addComponent(btnKel3)
-                    .addComponent(btnKel2))
+                    .addComponent(btnKel2)
+                    .addComponent(btnKel3))
                 .addGap(44, 44, 44)
                 .addComponent(BtnOk)
                 .addContainerGap(63, Short.MAX_VALUE))
@@ -459,6 +464,10 @@ public class MenuMahasiswaDaftarGeladi extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnKel2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKel2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnKel2ActionPerformed
 
 
 

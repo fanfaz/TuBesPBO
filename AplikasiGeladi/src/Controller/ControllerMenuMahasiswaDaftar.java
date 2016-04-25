@@ -123,7 +123,14 @@ public class ControllerMenuMahasiswaDaftar extends MouseAdapter implements Actio
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerMenuMahasiswaDaftar.class.getName()).log(Level.SEVERE, null, ex);
                 }
+            if (source.equals(view.getBtnExit())){
+                new Controller.ControllerMenuMahasiswaUtama(model, m);
+                view.dispose();
+            }
         }
+    }else if(source.equals(view.getBtnExit())){
+        new Controller.ControllerMenuMahasiswaUtama(model, m);
+        view.dispose();
     }
     }
     

@@ -70,6 +70,8 @@ public class Lokasi {
         }
     }
     
+   
+    
 
     public int getnKelompok() {
         return nKelompok;

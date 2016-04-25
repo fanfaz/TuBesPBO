@@ -71,7 +71,7 @@ public class ControllerLogin implements ActionListener, FocusListener {
                if((usernameAdmin.equalsIgnoreCase("admin")) && (passwordAdmin.equalsIgnoreCase("admin"))){
                    new Controller.ControllerMenuAdminUtama(model);
                    view.dispose();
-               }
+               }else{
             
             try {
                 String username = view.getUsername();
@@ -82,7 +82,7 @@ public class ControllerLogin implements ActionListener, FocusListener {
                 
                 if (m != null) {
                     if (password.equals(m.getNIM())){
-                        new ControllerMenuMahasiswaDaftar(model,m);
+                        new Controller.ControllerMenuMahasiswaUtama(model, m);
                         view.dispose();
                     
                     }else{
@@ -97,7 +97,7 @@ public class ControllerLogin implements ActionListener, FocusListener {
                 Logger.getLogger(ControllerLogin.class.getName()).log(Level.SEVERE, null, ex);
             }
 }
-    }
+    }}
 
         @Override
     public void focusGained(FocusEvent e) {
@@ -109,7 +109,7 @@ public class ControllerLogin implements ActionListener, FocusListener {
         Object o = e.getSource();
         if(o.equals(this.view.getTfnim())){
             if(this.view.getTfnim().getText().equals("")){
-                JOptionPane.showMessageDialog(null, "jgn kosong bray");
+                JOptionPane.showMessageDialog(null, "Mohon isi form");
             }
         }
     }

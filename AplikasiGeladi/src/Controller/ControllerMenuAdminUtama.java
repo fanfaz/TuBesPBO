@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.FocusEvent;
 import java.awt.event.FocusListener;
+import java.awt.event.MouseAdapter;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +20,7 @@ import javax.swing.JOptionPane;
  * @author ARFIATNA
  */
 
-public class ControllerMenuAdminUtama implements ActionListener{
+public class ControllerMenuAdminUtama extends MouseAdapter implements ActionListener,FocusListener{
         Aplikasi model;
         menuutamaadmin view;
         
@@ -34,7 +35,7 @@ public class ControllerMenuAdminUtama implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         Object source = e.getSource();
         if (source.equals(view.getBtnDataKelGeladi())) {
-            new Controller.ControllerMenuAdminDataKelompok();
+            new Controller.ControllerMenuAdminDataKelompok(model);
             view.dispose();
         }else if(source.equals(view.getBtnDataMahasiswa())){
             new Controller.ControllerMenuAdminDataMahasiswa(model);
@@ -46,6 +47,16 @@ public class ControllerMenuAdminUtama implements ActionListener{
             new Controller.ControllerLogin(model);
             view.dispose();
         }
+    }
+
+    @Override
+    public void focusGained(FocusEvent fe) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void focusLost(FocusEvent fe) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
