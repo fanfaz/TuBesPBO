@@ -42,7 +42,7 @@ public class ControllerMenuMahasiswaDaftar extends MouseAdapter implements Actio
         this.l=null;
         try {
             view.setListLokasi(model.getListDaerah());
-            view.setListPembimbing(model.getListListPembimbing());
+           // view.setListPembimbing(model.getListListPembimbing());
         } catch (SQLException ex) {
             Logger.getLogger(ControllerMenuMahasiswaDaftar.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -57,7 +57,21 @@ public class ControllerMenuMahasiswaDaftar extends MouseAdapter implements Actio
                 String Per = view.getSelectedPerusahaan();
                 Lokasi L = model.getLokasiPerusahaan(Per);
                 int I = L.getIdLokasi();
-                model.getLokasi(I).getKelompok(1).addAnggota(m);
+                model.getLokasi(I).getKelompok(0).addAnggota(m);
+                view.setPembimbing(model.getLokasi(I).getPembimbing(0).toString());
+                if (model.getLokasi(I).getKelompok(0).getAnggota(1)!=null){
+                    view.setAnggota1(model.getLokasi(I).getKelompok(0).getAnggota(1).toString());
+                }
+                if (model.getLokasi(I).getKelompok(0).getAnggota(2)!=null){
+                    view.setAnggota2(model.getLokasi(I).getKelompok(0).getAnggota(2).toString());
+                }
+                if (model.getLokasi(I).getKelompok(0).getAnggota(3)!=null){
+                    view.setAnggota3(model.getLokasi(I).getKelompok(0).getAnggota(3).toString());
+                }
+                if (model.getLokasi(I).getKelompok(0).getAnggota(4)!=null){
+                    view.setAnggota4(model.getLokasi(I).getKelompok(0).getAnggota(4).toString());
+                }
+                view.showMessage(view, "Anda telah terdaftar ke Perusahaan "+view.getSelectedPerusahaan()+" di Kelompok 1");
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerMenuMahasiswaDaftar.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -66,7 +80,22 @@ public class ControllerMenuMahasiswaDaftar extends MouseAdapter implements Actio
                 String Per = view.getSelectedPerusahaan();
                 Lokasi L = model.getLokasiPerusahaan(Per);
                 int I = L.getIdLokasi();
-                model.getLokasi(I).getKelompok(2).addAnggota(m);
+                model.getLokasi(I).getKelompok(1).addAnggota(m);
+                view.setPembimbing(model.getLokasi(I).getPembimbing(0).toString());
+                if (model.getLokasi(I).getKelompok(1).getAnggota(1)!=null){
+                    view.setAnggota1(model.getLokasi(I).getKelompok(1).getAnggota(1).toString());
+                }
+                if (model.getLokasi(I).getKelompok(1).getAnggota(2)!=null){
+                    view.setAnggota2(model.getLokasi(I).getKelompok(1).getAnggota(2).toString());
+                }
+                if (model.getLokasi(I).getKelompok(1).getAnggota(3)!=null){
+                    view.setAnggota3(model.getLokasi(I).getKelompok(1).getAnggota(3).toString());
+                }
+                if (model.getLokasi(I).getKelompok(1).getAnggota(4)!=null){
+                    view.setAnggota4(model.getLokasi(I).getKelompok(1).getAnggota(4).toString());
+                }
+                view.showMessage(view, "Anda telah terdaftar ke Perusahaan "+view.getSelectedPerusahaan()+" di Kelompok 2");
+                
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerMenuMahasiswaDaftar.class.getName()).log(Level.SEVERE, null, ex);
                 }
@@ -75,7 +104,22 @@ public class ControllerMenuMahasiswaDaftar extends MouseAdapter implements Actio
                 String Per = view.getSelectedPerusahaan();
                 Lokasi L = model.getLokasiPerusahaan(Per);
                 int I = L.getIdLokasi();
-                model.getLokasi(I).getKelompok(3).addAnggota(m);
+                model.getLokasi(I).getKelompok(2).addAnggota(m);
+                view.setPembimbing(model.getLokasi(I).getPembimbing(0).toString());
+                if (model.getLokasi(I).getKelompok(2).getAnggota(1)!=null){
+                    view.setAnggota1(model.getLokasi(I).getKelompok(2).getAnggota(1).toString());
+                }
+                if (model.getLokasi(I).getKelompok(2).getAnggota(2)!=null){
+                    view.setAnggota2(model.getLokasi(I).getKelompok(2).getAnggota(2).toString());
+                }
+                if (model.getLokasi(I).getKelompok(2).getAnggota(3)!=null){
+                    view.setAnggota3(model.getLokasi(I).getKelompok(2).getAnggota(3).toString());
+                }
+                if (model.getLokasi(I).getKelompok(2).getAnggota(4)!=null){
+                    view.setAnggota4(model.getLokasi(I).getKelompok(2).getAnggota(4).toString());
+                }
+                view.showMessage(view, "Anda telah terdaftar ke Perusahaan "+view.getSelectedPerusahaan()+" di Kelompok 3");
+                
                 } catch (SQLException ex) {
                     Logger.getLogger(ControllerMenuMahasiswaDaftar.class.getName()).log(Level.SEVERE, null, ex);
                 }

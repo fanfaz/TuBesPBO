@@ -15,16 +15,19 @@ import java.util.*;
 public class Kelompok implements Serializable{
     private int nomor;
     private Mahasiswa[] anggota;
-    private int nAnggota = 7; //jumlah maksimal anggota
+    private int nAnggota = 1; //jumlah maksimal anggota
     
     public Kelompok(int nomor){
         this.nomor = nomor;
-        this.anggota = new Mahasiswa[nAnggota];
+        this.anggota = new Mahasiswa[5];
     }
     
     public void addAnggota(Mahasiswa m){
+        if (nAnggota<=5){
         anggota[nAnggota] = m;
         nAnggota++;
+    }else {System.out.println("Kelompok penuh!");}
+        
     }
 
     public int getNomor() {

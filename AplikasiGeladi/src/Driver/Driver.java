@@ -35,10 +35,19 @@ public class Driver {
     model.getLokasi(3).addKelompok(2);
     model.getLokasi(3).addKelompok(3);
     
+    Mahasiswa m = model.getMahasiswa("1301144007");
+    model.getLokasi(1).getKelompok(0).addAnggota(m);
+    System.out.println(model.getLokasi(1).getKelompok(0).getAnggota(1).toString());
     
-    new ControllerLogin(model);
     Pembimbing p = model.getPembimbing("1301144097");
     model.getLokasi(1).addPembimbing(p);
+    System.out.println(model.getLokasi(1).getPembimbing(0).toString());
+    
+    
+    
+    
+    new ControllerLogin(model);
+    
     
     /*Mahasiswa m;
     Lokasi l;

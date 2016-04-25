@@ -16,12 +16,12 @@ public class Lokasi {
     private int idLokasi; //
     private Kelompok[] kelompok = new Kelompok[100];
     private int nPembimbing=1;
-    private int nKelompok=3;
+    private int nKelompok;
     
     public Lokasi(String daerah, String namaPerusahaan){
         this.daerah = daerah;
         this.namaPerusahaan = namaPerusahaan;
-        this.pembimbing = new Pembimbing[nPembimbing];
+        this.pembimbing = new Pembimbing[1];
         idLokasi=-1;
     }
     
@@ -29,6 +29,7 @@ public class Lokasi {
         this.idLokasi=idLokasi;
         this.daerah=daerah;
         this.namaPerusahaan=namaPerusahaan;
+        this.pembimbing = new Pembimbing[1];
     }
     
     public void setDaerah(String daerah) {
@@ -48,32 +49,27 @@ public class Lokasi {
     }
     
     public void addPembimbing(Pembimbing p){
-        if(pembimbing.length>nPembimbing){
-            pembimbing[nPembimbing] = p;
-            nPembimbing++;
+        if(pembimbing[0]==null){
+            pembimbing[0] = p;
+            
         }else {
             System.out.println("Sudah punya pembimbing");
-        }
+       }
     }
+    
     public int getnPembimbing() {
         return nPembimbing;
     }
 
     public void addKelompok(int nomor){
-        if(nKelompok < 100){
+        if(nKelompok <= 3){
             kelompok[nKelompok] = new Kelompok(nomor);
             nKelompok++;
         }else {
-            System.out.println("Kuota kelompok sudah penuh");
+            System.out.println("Kelompok di lokasi ini sudah 3");
         }
     }
-    public Kelompok getKelompok(int n) {
-        if(n<100){
-            return this.kelompok[n];
-        }else{
-            return null;
-        }
-    }
+    
 
     public int getnKelompok() {
         return nKelompok;
@@ -103,12 +99,12 @@ public class Lokasi {
         this.nKelompok = nKelompok;
     }
 
-    public Pembimbing[] getPembimbing() {
-        return pembimbing;
+    public Pembimbing getPembimbing(int i) {
+        return pembimbing[i];
     }
 
-    public Kelompok[] getKelompok() {
-        return kelompok;
+    public Kelompok getKelompok(int i) {
+        return kelompok[i];
     }
     
     
