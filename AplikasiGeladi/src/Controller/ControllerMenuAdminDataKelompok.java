@@ -32,6 +32,7 @@ public class ControllerMenuAdminDataKelompok extends MouseAdapter implements Act
     Pembimbing p;
     Kelompok k;
     Lokasi l;
+    int nomorkel;
     
     public ControllerMenuAdminDataKelompok(Aplikasi model){
         this.model = model;
@@ -78,6 +79,7 @@ public class ControllerMenuAdminDataKelompok extends MouseAdapter implements Act
             }
         }else if(source.equals(view.getBtnKel1())){
             try {
+                nomorkel=0;
                 String Per = view.getSelectedPerusahaan();
                 Lokasi L = model.getLokasiPerusahaan(Per);
                 int I = L.getIdLokasi();
@@ -92,12 +94,14 @@ public class ControllerMenuAdminDataKelompok extends MouseAdapter implements Act
                 }else{view.setAnggota3("Belum ada");}
                 if (model.getLokasi(I).getKelompok(0).getAnggota(4)!=null){
                     view.setAnggota4(model.getLokasi(I).getKelompok(0).getAnggota(4).toString());
-                }else{view.setAnggota4("Belum ada");}
+                }else{view.setAnggota4("Belum ada");
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ControllerMenuAdminDataKelompok.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else if (source.equals(view.getBtnKel2())){
             try {
+                nomorkel=1;
                 String Per = view.getSelectedPerusahaan();
                 Lokasi L = model.getLokasiPerusahaan(Per);
                 int I = L.getIdLokasi();
@@ -112,12 +116,14 @@ public class ControllerMenuAdminDataKelompok extends MouseAdapter implements Act
                 }else{view.setAnggota3("Belum ada");}
                 if (model.getLokasi(I).getKelompok(1).getAnggota(4)!=null){
                     view.setAnggota4(model.getLokasi(I).getKelompok(1).getAnggota(4).toString());
-                }else{view.setAnggota4("Belum ada");}
+                }else{view.setAnggota4("Belum ada");
+                }
             } catch (SQLException ex) {
                 Logger.getLogger(ControllerMenuAdminDataKelompok.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else if(source.equals(view.getBtnKel3())){
             try {
+                nomorkel=2;
                 String Per = view.getSelectedPerusahaan();
                 Lokasi L = model.getLokasiPerusahaan(Per);
                 int I = L.getIdLokasi();
@@ -139,6 +145,17 @@ public class ControllerMenuAdminDataKelompok extends MouseAdapter implements Act
                     }else if(source.equals(view.getBtnExit())){
         new Controller.ControllerMenuAdminUtama(model);
         view.dispose();
+    }else if((source.equals(view.getBtnUpdate1())) || (source.equals(view.getBtnUpdate2())) || (source.equals(view.getBtnUpdate3())) || (source.equals(view.getBtnUpdate4()))){
+            try {
+                String Per = view.getSelectedPerusahaan();
+                Lokasi L;
+                L = model.getLokasiPerusahaan(Per);
+                int I = L.getIdLokasi();
+                new Controller.ControllerUpdateDataKelompok(model, I, nomorkel);
+                view.dispose();
+            } catch (SQLException ex) {
+                Logger.getLogger(ControllerMenuAdminDataKelompok.class.getName()).log(Level.SEVERE, null, ex);
+            }
     }
     }
     
