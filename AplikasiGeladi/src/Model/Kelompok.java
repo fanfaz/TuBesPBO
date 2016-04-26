@@ -25,10 +25,33 @@ public class Kelompok implements Serializable{
     public void addAnggota(Mahasiswa m){
         if (nAnggota<=5){
         anggota[nAnggota] = m;
-        nAnggota++;
+        nAnggota++; 
     }else {System.out.println("Kelompok penuh!");}
         
     }
+    
+    public void deleteAnggota(Mahasiswa m){
+        for (int i=0;i<=3;i++){
+           if (anggota[i].getNIM()==m.getNIM()){
+               if (i==0){ //delete first
+                    anggota[i]=null;       
+                    for (int a=0; a<=3; a++){
+                    anggota[a]=anggota[a+1];
+               }}else if(i!=0 || i!=3){ //deleteafter
+                       anggota[i] = null;
+                       for(int a=i; a<=3; a++){
+                        anggota[a]=anggota[a+1];
+                       }
+               } else if(i==3){ //delete last
+                       anggota[i] = null;
+                       nAnggota--;
+                }
+               
+           }
+        }
+        }
+    
+
 
     public int getNomor() {
         return nomor;

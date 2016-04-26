@@ -157,6 +157,11 @@ public class Aplikasi {
         return connection.getListNamaPem();
     }
    
+   
+   public void deletePembimbing(Pembimbing p) throws SQLException{
+        connection.deletePembmbing(p);
+    }
+   
    ///KELOMPOK
    
    

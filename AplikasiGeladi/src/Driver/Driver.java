@@ -23,17 +23,17 @@ public class Driver {
     
     model.getLokasi(1).addKelompok(1);
     model.getLokasi(1).addKelompok(2);
-    model.getLokasi(1).addKelompok(3);
+   // model.getLokasi(1).addKelompok(3);
     
     
     model.getLokasi(2).addKelompok(1);
     model.getLokasi(2).addKelompok(2);
-    model.getLokasi(2).addKelompok(3);
+    //model.getLokasi(2).addKelompok(3);
     
     
     model.getLokasi(3).addKelompok(1);
     model.getLokasi(3).addKelompok(2);
-    model.getLokasi(3).addKelompok(3);
+    //model.getLokasi(3).addKelompok(3);
     
     Mahasiswa m1 = model.getMahasiswa("1301144007");
     model.getLokasi(1).getKelompok(0).addAnggota(m1);

@@ -97,7 +97,7 @@ public class ControllerMenuAdminDataPembimbing extends MouseAdapter implements A
             try {
                 String nim = view.getSelectedNim();
                 Pembimbing P = model.getPembimbing(nim);
-                //model.deletePembimbing(p);
+                model.deletePembimbing(p);
             } catch (SQLException ex) {
                 Logger.getLogger(ControllerMenuAdminDataPembimbing.class.getName()).log(Level.SEVERE, null, ex);
             }

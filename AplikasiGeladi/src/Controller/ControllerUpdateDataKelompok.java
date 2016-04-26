@@ -61,17 +61,17 @@ public class ControllerUpdateDataKelompok extends MouseAdapter implements Action
         }
     }
     
-    public void mousePressed(MouseEvent e){
+   /* public void mousePressed(MouseEvent e){
         Object source = e.getSource();
         if (source.equals(view.getListNim())) {
             try {
                 String NIM = view.getSelectedNim();
-                Mahasiswa m = model.getMahasiswa(NIM);
+                //Mahasiswa m = model.getMahasiswa(NIM);
                 
             } catch (SQLException ex) {
                 Logger.getLogger(ControllerUpdateDataKelompok.class.getName()).log(Level.SEVERE, null, ex);
             }
-}
-    }
+}*/
+    
             
 }

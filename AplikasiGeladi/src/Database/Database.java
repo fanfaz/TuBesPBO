@@ -31,7 +31,7 @@ public class Database {
     
     public void connect(){
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://localhost/db_geladi", "arfiatna", "");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/db_geladi", "root", "");
             statement = connection.createStatement();
             System.out.println("Anda berhasil terkoneksi");
         } catch (Exception e) {
@@ -91,9 +91,9 @@ public class Database {
     }
     
     public void deleteMahasiswa(Mahasiswa m){
-        String query= "delete mahasiswa where nim_mhs = "+m.getNIM();
+        String query= "delete from mahasiswa where nim_mhs = "+m.getNIM();
         try {
-            statement.executeUpdate(query);
+            statement.executeQuery(query);
         } catch (SQLException ex) {
             Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -247,6 +247,16 @@ public class Database {
             listId.add(rs.getString(1));
         }
         return listId.toArray(new String[0]);
+    }
+    
+    
+    public void deletePembmbing(Pembimbing p){
+        String query= "delete from pembimbing where nip_pmb = "+p.getNIP();
+        try {
+            statement.executeQuery(query);
+        } catch (SQLException ex) {
+            Logger.getLogger(Database.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     

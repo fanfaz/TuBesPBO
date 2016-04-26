@@ -70,6 +70,12 @@ public class Lokasi {
         }
     }
     
+    public void deleteKelompok(){
+        kelompok[nKelompok]=null;
+        nKelompok--;
+        
+    }
+    
    
     
 
