@@ -38,11 +38,11 @@ public class Aplikasi {
     
     
     public Mahasiswa getMahasiswa(String nim) throws SQLException{
-        for (Mahasiswa m : daftarMahasiswa){
+       /* for (Mahasiswa m : daftarMahasiswa){
             if (m.getNIM().equalsIgnoreCase(nim)){
                 return m;
             }
-        }
+        } */
         Mahasiswa m = connection.getMahasiswa(nim);
         daftarMahasiswa.add(m);
         return m;
